@@ -1,21 +1,38 @@
 <!DOCTYPE html>
 <html> 
+
 <head>
 <meta charset="UTF-8">
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <title>signIn.jsp</title>
 <link rel="stylesheet" href="/resources/css/signIn.css">
 </head>
-<script type="text/javascript">
+<script>
 		
-		var msg = '${msg}';
-        if (msg.length > 0) {
-            alert(msg);
-        }
+		// var msg = '${msg}';
+        // if (msg.length > 0) {
+        //     alert(msg);
+        // }
+
+    $( document ).ready( function() {
+        $("#email").focus( function() {
+          $( "#bar1" ).css( "color", "red" );
+        } );
+        
+        $("#email").blur( function() {
+            $( "#bar1" ).css( "color", "blue" );
+        } );
+        
+        $("#passwd").focus( function() {
+            $( "#bar2" ).css( "color", "red" );
+        } );
+        
+        $("#passwd").blur( function() {
+            $( "#bar2" ).css( "color", "blue" );
+        } );
+      } );
 		
-        $(document).ready(function()) {
-            $("#bar")
-        }
+
 		
 	</script>
 <body>
@@ -26,23 +43,23 @@
 
     
     <div id="outter">
-        <dir class="between1"></dir>
+        <div class="between1"></div>
         <form action="/login/signIn" method="POST">
             <c:if test="${number == null}">
             <div class="login_id">
-                <input type="text" id="email" name="email" placeholder="Email" onclick="inputClick()"><br>
-                <hr id="bar">
+                <input type="text" id="email" name="email" placeholder="Email" ><br>
+                <hr id="bar1">
             </div>
             <div class="login_pw">
-                <input type="password" id="passwd" name="passwd" placeholder="Password" onclick="inputClick()"><br>
-                <hr id="bar">
+                <input type="password" id="passwd" name="passwd" placeholder="Password"><br>
+                <hr id="bar2">
             </div>
             <div class="login_etc">
                 <label for="rememberMe">rememberMe</label>
                 <input type="checkbox" name="remember-me"><br>
             </div>
 
-            <dir class="between2"></dir>
+            <div class="between2"></div>
 
             <div class="submit" class="between"> 
                 <input type="submit" value="Sign-In" >
@@ -73,4 +90,5 @@
 
     </div>
 </body>
+
 </html>

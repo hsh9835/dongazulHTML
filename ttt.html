@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="resources/css/ttt.css">
+    </head>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+
+    <script>
+    <script> $(function(){ $("#uid").focus(); // 페이지가 로딩됐을때 #uid 를 가진 input 태그부터 선택되어진다 $("#uid").keydown(function(event){ if(event.keyCode == 13){ // id 입력부분에서 엔터키를 쳤을 경우 $("#upw").focus(); // pw 입력부분으로 포커스 이동한다 } }); $("#upw").keydown(function(e){ if(e.keyCode == 13){ $("form").submit(); // pw 입력부분에서 엔터를 치면 submit 실행 } }); $("input").focus(function(){ // id 입력부분 선택시 배경색 변화 $(this).css("background-color", "#cce6ff"); }); $("input").blur(function(){ // 입력커서를 벗어났을시 초기화 $(this).css("background-color", "white"); }); }); </script>
+
+출처: https://zodlab.tistory.com/29 [조드군의 일상]
+    </script>
+
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <input type="text" id="email">
+        
+        <br><br><br><br><br>
+            <p>text</p>
+
+        <script src="" async defer></script>
+    </body>
+</html>
