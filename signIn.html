@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="UTF-8">
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<title>signIn.jsp</title>
+<link rel="stylesheet" href="/resources/css/signIn.css">
+</head>
+<script type="text/javascript">
+		
+		var msg = '${msg}';
+        if (msg.length > 0) {
+            alert(msg);
+        }
+		
+        $(document).ready(function()) {
+            $("#bar")
+        }
+		
+	</script>
+<body>
+	<div class="wrap">
+	
+	<div class="login">
+    <h2 id="title">Dongazul</h2>
+
+    
+    <div id="outter">
+        <dir class="between1"></dir>
+        <form action="/login/signIn" method="POST">
+            <c:if test="${number == null}">
+            <div class="login_id">
+                <input type="text" id="email" name="email" placeholder="Email" onclick="inputClick()"><br>
+                <hr id="bar">
+            </div>
+            <div class="login_pw">
+                <input type="password" id="passwd" name="passwd" placeholder="Password" onclick="inputClick()"><br>
+                <hr id="bar">
+            </div>
+            <div class="login_etc">
+                <label for="rememberMe">rememberMe</label>
+                <input type="checkbox" name="remember-me"><br>
+            </div>
+
+            <dir class="between2"></dir>
+
+            <div class="submit" class="between"> 
+                <input type="submit" value="Sign-In" >
+            </div> 
+        </c:if>
+    
+    
+    </form>
+        <div class="submit"> 
+            <form action="/member/signUp" method="GET">
+                <input type="submit" value="Sign-Up"/>
+            </form>
+        </div>
+        <div class="submit"> 
+            <form action="/login/findId" method="GET">
+                <input type="submit" value="forgot email?">
+            </form>
+        </div>
+        <div class="submit"> 
+            <form action="/login/findPw" method="GET">
+                <input type="submit" value="forgot password?">
+            </form>
+        </div>
+
+        </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
