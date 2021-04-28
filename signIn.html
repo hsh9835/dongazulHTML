@@ -9,26 +9,30 @@
 </head>
 <script>
 		
-		// var msg = '${msg}';
-        // if (msg.length > 0) {
-        //     alert(msg);
-        // }
+		var msg = '${msg}';
+        if (msg.length > 0) {
+            alert(msg);
+        }
 
     $( document ).ready( function() {
         $("#email").focus( function() {
-          $( "#bar1" ).css( "color", "red" );
+          $( "#bar1" ).css( "border", "1.2px solid rgb(9, 204, 9)" );
+          $( "#bar1" ).css( "backgroundcolor", "rgb(9, 204, 9)" );
         } );
         
         $("#email").blur( function() {
-            $( "#bar1" ).css( "color", "blue" );
+            $( "#bar1" ).css( "border", "0.1px solid rgb(150, 150, 150)" );
+            $( "#bar1" ).css( "background-color", "rgb(150, 150, 150)" );
         } );
         
         $("#passwd").focus( function() {
-            $( "#bar2" ).css( "color", "red" );
+            $( "#bar2" ).css( "border", "1.2px solid rgb(9, 204, 9)" );
+            $( "#bar2" ).css( "backgroundcolor", "rgb(9, 204, 9)" );
         } );
         
         $("#passwd").blur( function() {
-            $( "#bar2" ).css( "color", "blue" );
+            $( "#bar2" ).css( "border", "0.1px solid rgb(150, 150, 150)" );
+            $( "#bar2" ).css( "background-color", "rgb(150, 150, 150)" );
         } );
       } );
 		
@@ -54,6 +58,7 @@
                 <input type="password" id="passwd" name="passwd" placeholder="Password"><br>
                 <hr id="bar2">
             </div>
+            <br>
             <div class="login_etc">
                 <label for="rememberMe">rememberMe</label>
                 <input type="checkbox" name="remember-me"><br>

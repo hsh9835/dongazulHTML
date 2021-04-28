@@ -49,11 +49,17 @@ li {
 }
 
 #bar1 {
-  border: 1px solid;
+  border: 0.1px solid rgb(150, 150, 150);
+  background-color: rgb(150, 150, 150);
+  width: 100%;
+  float: left;
 }
 
 #bar2 {
-  border: 1px solid;
+    border: 0.1px solid rgb(150, 150, 150);
+    background-color: rgb(150, 150, 150);
+    width: 100%;
+    float: left;
 }
 
 .login {
@@ -110,8 +116,7 @@ li {
 }
 
 .login_etc {
-  margin-bottom: 0px;
-  padding: 10px 10px 0px 10px;
+  padding: 0px 10px 0px 10px;
   width: 50%;
   font-size: 12px;
   display: flex;
@@ -126,7 +131,7 @@ li {
 }
 
 .between2 {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .submit input {

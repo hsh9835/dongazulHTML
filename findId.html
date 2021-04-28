@@ -1,0 +1,33 @@
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%> -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>findId.jsp</title>
+<link rel="stylesheet" href="findId.css">
+</head>
+
+<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+<body>
+	<div class="wrap">
+		<div class="box">
+			<h1>이메일 찾기 화면</h1>
+			<br>
+			<form action="/login/findIdResult" method="post">
+				<input type="input" id="phonenumber" value="&nbsp&nbsp-자 없이 입력" name="phonenumber" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+				<input type="submit" class="findEmail" value="이메일찾기">
+			</form>
+
+			<br>
+			<form action="">
+				<input type="submit" class="back" value="돌아가기"></button>
+			</form>
+
+		</div>
+	</div>
+</body>
+</html>
