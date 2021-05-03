@@ -7,6 +7,22 @@
   font-family: "Noto Sans KR", sans-serif;
 }
 
+@media screen and (min-width:350px) and (max-width: 800px)
+and (min-height: 200px) {
+
+  @font-face {
+      font-family: 'Blacksword';
+      src: url('../font/Blacksword.otf')
+    }
+
+    login {
+      font-family: "Blacksword";
+      font-size: 60px;
+      color: rgba(0, 0, 0, 0.85);
+    }
+
+  
+  
 a {
   text-decoration: none;
   color: black;
@@ -22,12 +38,26 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url(/resources/backmain.jpg);
+  background: url(/resources/backmain.jpg); 
+  
 
 }
 
 .login {
-  width: 30%;
+  width: 50%;
+  height: 650px;
+  background: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 54px;
+  
+}
+
+.login {
+  width: 40%;
   height: 650px;
   background: white;
   border-radius: 20px;
@@ -37,18 +67,10 @@ li {
   flex-direction: column;
 }
 
-.login {
-  width: 30%;
-  height: 650px;
-  background: white;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+#regForm {
+    width: 80%;
+    margin: auto 0;
 }
-
-
 
 .login_id {
   margin-top: 20px;
@@ -93,8 +115,10 @@ li {
 }
 
 .submit {
+  margin-left: 25px;
   margin-top: 20px;
   width: 80%;
+
 
 }
 .submit button, .emailCheck {
@@ -103,9 +127,29 @@ li {
   border: 0;
   outline: none;
   border-radius: 40px;
-  background: linear-gradient(to left, rgb(255, 77, 46), rgb(255, 155, 47));
+  background: linear-gradient(to left, rgb(255, 46, 143), rgb(255, 155, 47));
   color: white;
   font-size: 1em;
   letter-spacing: 2px;
   cursor: pointer;
 }
+
+.emailCheck {
+  /* maring-left: auto 0; */
+  margin-left:  50px;
+  maring-right: auto 0;
+  margin-top: 30px;
+}
+
+.submit button {
+    margin-bottom: 50px;
+}
+
+.submit {
+  margin-left: 25px;
+}
+
+
+/* .login_pw .login_id {
+    /* padding 5px; */
+} */
