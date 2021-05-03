@@ -42,14 +42,46 @@
     src: url('../font/Blacksword.otf')
   }
 
+h1{
+  font-size: 30px;
+  margin: 20px 0px 20px 0px;
+}
+ 
+
+.box {
+  width: 380px;
+  height: 200px;
+  background: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#phonenumber {
+  width: 60%;
+  padding-left: 10px;
+  margin-right: 0px;
+}
+
+.findEmail {
+  margin-left: 12px;
+  padding: 0px 10px 0px 10px;
+}
+
+.back {
+  margin: 20px 0px 15px 0px;
+  padding: 10px;
+  width: 100%;
+  border: 0;
+  outline: none;
+  border-radius: 40px;
+  background: #E089AC;
+  color: white;
+  font-weight: 1000;
+  font-size: 15px;
   
-  .box {
-    width: 380px;
-    height: 200px;
-    background: white;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
+  letter-spacing: 2px;
+  cursor: pointer;
+}
