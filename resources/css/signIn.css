@@ -117,7 +117,7 @@ li {
 
 .login_etc {
   padding: 0px 10px 0px 10px;
-  width: 50%;
+  width: 40%;
   font-size: 12px;
   display: flex;
   justify-content: space-between;
@@ -149,3 +149,4 @@ li {
   letter-spacing: 2px;
   cursor: pointer;
 }
+
