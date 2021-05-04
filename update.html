@@ -1,6 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-        <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+        <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %> -->
             <!DOCTYPE html>
             <html>
 
@@ -9,11 +9,11 @@
                 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
                 <title>동아줄 : 프로필 수정</title>
                 
-                <link rel="stylesheet" href="/resources/signUp.css">
+                <link rel="stylesheet" href="/resources/css/update.css">
             </head>
 
             <body>
-               
+               <div class="background">
                 <section class="wrap">
  					 <div class="login">               	
                 	<h2>Myprofile</h2>
@@ -54,17 +54,9 @@
                         </div>
                         
                         <div class="login_id">
-                            <label class="control-label" for="introduce">Self-Introduction</label>
+                            <label class="control-label" for="introduce">Hobby</label>
                             <br>
-                            <textarea class="form-control" type="content" cols="50"
-                            rows="8" id="introduce" name="introduce" value="${__PROFILE__.introduce}"
-                            placeholder="자기소개를 작성해주세요."></textarea>
-                            <div id=text_cnt>(0/500)</div>
-                        </div>
-                       
-
-                        <div class="login_id">
-                            <select name="hobby1" class="control-label">
+                            <select name="hobby1" class="control-label form-control">
 
                                 <option value="">취미1
                                 <option value="운동">운동
@@ -81,7 +73,7 @@
                             </select>
                        
                        
-                            <select name="hobby2" class="control-label">
+                            <select name="hobby2" class="control-label form-control">
                                 
                                 <option value="">취미2
                                 <option value="운동">운동
@@ -98,7 +90,7 @@
                             </select>
 
                        
-                            <select name="hobby3" class="control-label">
+                            <select name="hobby3" class="control-label form-control">
                                 
                                 <option value="">취미3
                                 <option value="운동">운동
@@ -114,6 +106,15 @@
                             
                             </select>
                         </div>
+                        
+                        <div class="login_id">
+                            <label class="control-label" for="introduce">Self-Introduction</label>
+                            <br>
+                            <textarea class="form-control" type="content" cols="50"
+                            rows="8" id="introduce" name="introduce" value="${__PROFILE__.introduce}"
+                            placeholder="자기소개를 작성해주세요."></textarea>
+                            <div id=text_cnt>(0/500)</div>
+                        </div>
 
                         <div class="submit">
                             <button class="submit" type="submit" id="submit">Profile submit</button>
@@ -122,11 +123,11 @@
                     
                     <form action="/profile/info" method="get">
                     	<input type="hidden" name="email" value="${member.email}">
-            			<input type="submit" value="←">
+            			<input type="submit" id="back" value="back">
       			    </form>
                     </div>
                 </section>
-                
+            </div>
             </body>
             
             </html>
