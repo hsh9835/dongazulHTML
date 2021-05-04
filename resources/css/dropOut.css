@@ -44,13 +44,13 @@
   
   h1{
   font-size: 30px;
-  margin: 10px 0px 20px 0px;
+  margin: 0px 0px 20px 0px;
   }
   
   
   .box {
   width: 320px;
-  height: 460px;
+  height: 400px;
   background: white;
   border-radius: 20px;
   display: flex;
@@ -85,7 +85,7 @@
 }
 
 .buttons {
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;

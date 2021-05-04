@@ -38,24 +38,35 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(-60deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 100%;
-	animation: a 60s ease infinite;
-  /* position: relative; */
-  
+    background: linear-gradient(-60deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 100%;
+    animation: a 60s ease infinite;
+}
+
+@keyframes a {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
 }
 
 .login {
-  width: 40%;
+  width: 320px;
   height: 650px;
+  margin: 40px 0px 40px 0px;
   background: white;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 54px;
   
 }
 
@@ -67,8 +78,8 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; */
-}
+  flex-direction: column;
+} */
 
 #regForm {
     width: 100%;
