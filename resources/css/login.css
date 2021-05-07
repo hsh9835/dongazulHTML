@@ -20,9 +20,9 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-	background: linear-gradient(-60deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 100%;
-	animation: a 60s ease infinite;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: a 9s ease infinite;
 }
 
 @keyframes a {
@@ -48,23 +48,8 @@ li {
   color: rgba(0, 0, 0, 0.85);
 }
 
-#bar1 {
-  border: 0.1px solid rgb(150, 150, 150);
-  background-color: rgb(150, 150, 150);
-  width: 100%;
-  float: left;
-}
-
-#bar2 {
-    border: 0.1px solid rgb(150, 150, 150);
-    background-color: rgb(150, 150, 150);
-    width: 100%;
-    float: left;
-}
-
 .login {
   width: 380px;
-  min-width: 350px;
   height: 650px;
   background: white;
   border-radius: 20px;
@@ -74,8 +59,18 @@ li {
   flex-direction: column;
 }
 
+.login hr {
+  border: rgba(0, 0, 0, 0);
+  background-color: rgba(41, 41, 41, 0.315);
+  height: 1px;
+}
+
 #outter {
   width: 250px;
+}
+
+.between1 {
+  margin-bottom: 30px;
 }
 
 .login_id {
@@ -113,11 +108,10 @@ li {
 }
 
 .login_etc {
-  margin-top: 20px;
-  margin-right: 10px;
-  padding: 0px 10px 0px 10px;
-  width: 40%;
-  font-size: 12px;
+  margin-bottom: 0px;
+  padding: 10px 10px 0px 10px;
+  width: 50%;
+  font-size: 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -127,6 +121,10 @@ li {
 
 .login_etc input {
   margin-left: 5px;
+}
+
+.between2 {
+  margin-top: 40px;
 }
 
 .submit input {
@@ -139,9 +137,7 @@ li {
   background: #E089AC;
   color: white;
   font-weight: 500;
-  font-size: 18px;
-  
+  font-size: 1em;
   letter-spacing: 2px;
   cursor: pointer;
 }
-

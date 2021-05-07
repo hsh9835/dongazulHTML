@@ -7,8 +7,6 @@
   font-family: "Noto Sans KR", sans-serif;
 }
 
-@media screen and (min-width:350px) and (max-width: 800px)
-and (min-height: 200px) {
 
   @font-face {
     font-family: 'Blacksword';
@@ -53,8 +51,6 @@ li {
     100% {
         background-position: 0% 50%;
     }
-}
-
 }
 
 .login {
