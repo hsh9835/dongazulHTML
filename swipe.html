@@ -1,9 +1,10 @@
+<!-- <%@page 
+    language="java" contentType="text/html; 
+    charset=utf8" pageEncoding="utf8"%>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%> -->
 
-
-<%@ page language="java" contentType="text/html; charset=utf8"
-    pageEncoding="utf8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,20 +17,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-<style>
-	.thumbImg {
-	}
 
-</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.x.x/css/swiper.css"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.x.x/css/swiper.min.css">
 
+출처: https://uxgjs.tistory.com/141 [UX 공작소]
 <!--fontawesome ---->
 <script src="https://kit.fontawesome.com/dc299fac74.js" crossorigin="anonymous"></script>
-<style>
-	img {
-		width: 200px;
-		height: 200px;	
-	}
-</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.x.x/js/swiper.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.x.x/js/swiper.min.js"></script>
+
+
+
 </head>
 
 	<script type="text/javascript">
@@ -39,11 +37,12 @@
 		var msg = '${msg}';
         if (msg.length > 0) {
             alert(msg);
-        }		
-	})
+            }		
+        })
 	</script>
+
+    <script src="/resources/js/swipeFunction.js"></script>
 <body>
-	
 		<nav class="navbar">
         <a class="fas fa-fire" href="#"></a> <!-- 누르기 기능 삭제 -->
 		<a class="fas fa-comments" href="/chat/rooms"></a>
@@ -83,14 +82,18 @@
         </tbody>
     </table>
 
-        <ul class="slide-menu">
-            <li class="slide-menus"><a href="/profile/infoThem?email=${li.email}"><img src="${li.imageRoot}"></a></li>
-            <li class="slide-menus"><a href="/profile/infoThem?email=${li.email}"><img src="${li.imageRoot}"></a></li>
-            <li class="slide-menus"><a href="/profile/infoThem?email=${li.email}"><img src="${li.imageRoot}"></a></li>
-            <li class="slide-menus"><a href="/profile/infoThem?email=${li.email}"><img src="${li.imageRoot}"></a></li>
-            <li class="slide-menus"><a href="/profile/infoThem?email=${li.email}"><img src="${li.imageRoot}"></a></li>
-            <li class="slide-menus"><a href="/profile/infoThem?email=${li.email}"><img src="${li.imageRoot}"></a></li>
+    <div class="swiper-container">
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide"><a href="/profile/infoThem?email=${li.email}"><img src="${li.imageRoot}"></a></li>
+            <li class="swiper-slide"><a href="/profile/infoThem?email=${li.email}"><img src="${li.imageRoot}"></a></li>
+            <li class="swiper-slide"><a href="/profile/infoThem?email=${li.email}"><img src="${li.imageRoot}"></a></li>
+            <li class="swiper-slide"><a href="/profile/infoThem?email=${li.email}"><img src="${li.imageRoot}"></a></li>
+            <li class="swiper-slide"><a href="/profile/infoThem?email=${li.email}"><img src="${li.imageRoot}"></a></li>
+            <li class="swiper-slide"><a href="/profile/infoThem?email=${li.email}"><img src="${li.imageRoot}"></a></li>
         </ul>
+
+        <div class="swiper-pagination"></div>
+    </div>
         
 		
         <c:if test="${member != null}">
@@ -104,12 +107,11 @@
             <input type="submit" value="회원탈퇴">
         </form>
         
-    
-        
         <form action="/profile/create" method="get">
                 <input type="hidden" value="${member.email}">
             <input type="submit" value="프로필 생성">
         </form>
+
 	<!--<c:if test="${member != null}">
         <div>
             <p>${member.email}님 환영합니다.</p>
