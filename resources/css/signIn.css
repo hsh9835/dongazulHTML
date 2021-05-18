@@ -20,7 +20,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-	background: linear-gradient(-60deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background: linear-gradient(-60deg, rgb(238, 119, 82), rgb(231, 60, 126), rgb(35, 166, 213), rgb(35, 213, 171));
 	background-size: 400% 100%;
 	animation: a 60s ease infinite;
 }
